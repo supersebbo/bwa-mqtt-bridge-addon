@@ -1,14 +1,17 @@
 name: "BWA MQTT Bridge"
 description: "BWA MQTT Bridge"
-version: "1.0.0"
+version: "1.0.2"
 slug: "bwa_mqtt_bridge"
 init: false
 startup: application
 services:
   - 'mqtt:need'
 options:
-  bridge_ip: '10.10.10.214'
-  bridge_port: '9999'
+  bridge_ip: null
+  bridge_port: null
+schema: 
+  bridge_ip: str
+  bridge_port: port
 arch:
   - aarch64
   - amd64
