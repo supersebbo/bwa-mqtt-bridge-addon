@@ -1,17 +1,23 @@
 name: "BWA MQTT Bridge"
 description: "BWA MQTT Bridge"
-version: "1.0.2"
+version: "1.0.11"
 slug: "bwa_mqtt_bridge"
 init: false
 startup: application
+usb: true
+uart: true
 services:
   - 'mqtt:need'
 options:
-  bridge_ip: null
-  bridge_port: null
+  connection_type: tcp
+  bridge_address: null
+  bridge_port: 8899
+  device: /dev/null
 schema: 
-  bridge_ip: str
-  bridge_port: port
+  connection_type: list(tcp|local|rfc2217)
+  bridge_address: str?
+  bridge_port: int?
+  device: device?
 arch:
   - aarch64
   - amd64

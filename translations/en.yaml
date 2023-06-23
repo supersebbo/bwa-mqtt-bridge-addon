@@ -1,0 +1,22 @@
+---
+configuration:
+  connection_type:
+    name: Connection Type
+    description: >-
+      Type of connection to use, 'TCP' (for Balboa official or RS485<->TCP WiFi Bridge), 'local'
+      for a local RS485 serial device or 'rfc2217' for an RFC2217 compliant telnet bridge. 
+  bridge_address:
+    name: Bridge IP or Hostname
+    description: >-
+      The IP or Hostname of the TCP or RFC2217 bridge device. Mandatory if using
+      TCP or RFC2217 connection types.
+  bridge_port:
+    name: Bridge Port
+    description: >-
+      The port on which to connect to the TCP or RFC2217 Bridge device. Mandatory if using
+      TCP or RFC2217 connection type.
+  device:
+    name: Local Serial Device
+    description: >-
+      The device to connect to for the local RS485 connection. Mandatory if using 'local'
+      connection method. 
